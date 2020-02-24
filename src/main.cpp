@@ -2,14 +2,14 @@
 // Compile with: g++ main.cpp -lncurses -o example
 
 #include <iostream>
-#include "Uml-seq.hpp"
+#include "Uml-class.hpp"
 #include "VimBackend.hpp"
 #include "ExampleTool.hpp"
 #include "include/Logic.hpp"
 
 int main()
 {
-    tools::UmlSeq tool;
+    tools::UmlClass tool;
     backends::VimBackend backend;
     backend.setTool(tool);
     tool.setBackend(backend);

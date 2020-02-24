@@ -44,7 +44,7 @@ class Line : public IDrawable
             
         }
 
-    friend class Process;
+    //!!!!!!!!friend class Process;
 };
 
 #endif

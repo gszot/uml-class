@@ -42,7 +42,7 @@ class Box : public IDrawable
 #pragma GCC diagnostic pop
 #endif
 
-    friend class Process;
+    //!!!!!!!!!!!friend class Process;
 };
 
 #endif
