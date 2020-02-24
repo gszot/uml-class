@@ -4,7 +4,6 @@
 #include <iostream>
 #include "Uml-class.hpp"
 #include "VimBackend.hpp"
-#include "ExampleTool.hpp"
 #include "include/Logic.hpp"
 
 int main()

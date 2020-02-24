@@ -1,7 +1,7 @@
 CXX=g++
 CXXFLAGS=-Wall -Wextra -Wpedantic -g -I./common -I./src/include -I./backends/vim-backend/include -std=c++17 -g
 LINKFLAGS= -L./backends/vim-backend/ -lVimBackend -lncurses -lpanel
-TARGET=uml-seq.app
+TARGET=uml-class.app
 
 BASESOURCES=$(wildcard ./src/*.cpp)
 SOURCES= $(BASESOURCES)

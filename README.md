@@ -1,25 +1,21 @@
-# Uml Sequence editor
-Status: tworzony `(91%)` (czeka na inne backendy i znalezienie krytycznych błędów)
-
-> ZALICZONY, NIE BĘDZIE ROZWIJANY!
+# Uml class editor
+Status: w dupie
 
 ## Wspierane backendy
 
 | Backend | Status          | Uwagi                                                         |
 |:-------:|:---------------:|:---------------------------------------------------------------:|
-| Vim     | Gotowy | - |
-| MCedit  | -               |                                                               |
-|         |                 |                                                               |
+| Vim     | XD                                                           |
 
 ## Kompilacja i uruchomienie
 
 ```
 make all
-chmod u+x uml-seq.app
-./uml-seq.app
+chmod u+x uml-class.app
+./uml-class.app
 ```
 ## Komendy
 
-W pliku `Uml-seq.hpp` .
+W pliku `Uml-class.hpp` .
 
 
