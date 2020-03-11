@@ -8,19 +8,28 @@
 
 class Box : public IDrawable
 {
-    std::string content{""};
+    std::string name{""};
     Point p; //lewy górny róg
 
-    Box() = default;
+    static constexpr unsigned maxContentSize{ 8 };
+    unsigned int Spaces;
 
+
+    Box() = default;
     public:
-        Box(std::string s, Point p) : content(s), p(p) {}
+
+        Box(std::string s, Point p) : name(s), p(p) {
+            
+        }
         
         void draw(IRenderer &r) override
         {
-            r.renderString("+" + std::string(content.size(),'-') + "+", p);
-            r.renderString("|" + content + "|", {p.x, p.y + 1} );
-            r.renderString("+" + std::string(content.size(),'-') + "+", {p.x, p.y + 2} );
+            if (maxContentSize - name.size() >= 0)
+                Spaces = maxContentSize - name.size();
+            else
+                Spaces = 0;
+                
+            r.renderString("|" + name + std::string(Spaces, ' ') + "|", {p.x, p.y} );
         }
 
         Point leftUpperCorner() const
@@ -33,16 +42,17 @@ class Box : public IDrawable
 #pragma GCC diagnostic ignored "-Wnarrowing"
 #endif
 
-        Point rightLowerCorner() const
+        Point rightLowerCorner() const //rightCorner bo jedna linia
         {
-            return {p.x + 1 + content.size(), p.y + 2};
+            return { p.x + maxContentSize + 1, p.y};
         }
 
 #ifdef __GNUC__
 #pragma GCC diagnostic pop
 #endif
 
-    //!!!!!!!!!!!friend class Process;
+    friend class Class;
+    friend class ClassBox;
 };
 
 #endif
