@@ -1,11 +1,9 @@
 # Uml class editor
-Status: w dupie
+Status: working
 
 ## Wspierane backendy
 
-| Backend | Status          | Uwagi                                                         |
-|:-------:|:---------------:|:---------------------------------------------------------------:|
-| Vim     | XD                                                           |
+Vim Backend
 
 ## Kompilacja i uruchomienie
 
